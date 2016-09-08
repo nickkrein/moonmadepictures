@@ -2,3 +2,7 @@ database.rules.json
 firebase.json
 node_modules
 .firebaserc
+bower_components
+.sass-cache*
+*.map
+public
