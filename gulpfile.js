@@ -76,7 +76,10 @@ gulp.task('serve', [], function() {
     server: {
       baseDir: './public'
     },
+
+    // Uncomment proxy, add 'nodemon' to array above and comment out server object to use nodemon
     // proxy: 'http://localhost:8000',
+    
     // Remove "Connected to BrowserSync" notifications
     notify: false
   });

@@ -1,0 +1,233 @@
+@import 'main';
+@import 'normalize';
+
+
+html { 
+  height: 100%;
+  background: url(../assets/moonmadebackground.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  color: #444;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+} 
+
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+}
+
+.contact-btn {
+  float: right; 
+  margin-right: 30px;
+  border: 3px solid #444;
+  border-radius: 10px;
+  padding: 4px;
+  font-weight: bold;
+  opacity: .5;
+  transition: .25s;
+  &:hover {
+    transition: .25s;
+    opacity: 1;
+  }
+}
+
+
+.container {
+  min-height:100%;
+  position: relative;
+  .landing {
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */ /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    bottom: 10px;
+    opacity: 0;
+    -webkit-animation: fadein .5s ease 0s forwards;
+    animation: fadein 1.5s ease 0s forwards;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+
+    .landing-image {
+      max-width: 449px;
+      height: auto;
+      padding: 0 5%;
+
+      .logo {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .email {
+      font-family: Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 20px;
+    }
+  }
+}
+
+.about {
+	width: 100%;
+	height: 300px;
+	background: #FFF;
+	position: relative;
+	opacity: .5;
+}
+
+.contact-form {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+
+
+@keyframes fadein {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+footer {
+  display: none;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #010101;
+  background: #DCD8D7;
+  opacity: .5;
+  box-shadow: -2px 0px 2px 0px rgba(34,2,0,.5);
+  p {
+  	margin: 0;
+  }
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 660px) {
+    /* Style adjustments for viewports that meet the condition */
+    footer {
+      display: block;
+    }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
