@@ -114,7 +114,17 @@ a {
     width: 60%;
     input, textarea {
       display: block;
+      border-radius: 5px;
       width: 100%;
+    }
+    input[type=text], input[type=email], textarea {
+      background: #FAFAFA;
+      box-sizing: border-box;
+    }
+    div {
+
+      input[type=submit] {
+      }
     }
   }
 }
