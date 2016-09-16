@@ -26,9 +26,9 @@
         <nav>
           <ul>
             <li>About</li>
-            <span> / </span>
+            <span>&nbsp;/&nbsp;</span>
             <li>Portfolio</li>
-            <span> / </span>
+            <span>&nbsp;/&nbsp;</span>
             <li>Contact</li>
             <a href="#" class="contact-btn"><li>Contact</li></a>
           </ul>
@@ -55,8 +55,30 @@
       
     </section>
     
-    <section class="contact-form">
-      
+    <section class="contact">
+     
+      <div class="wrapper">
+        <form class="contact-form wrapper" action="https://formspree.io/nkreinmusic@gmail.com"
+          method="POST">
+
+            <label for="name">Your name:</label>
+            <input type="text" name="name" required />
+
+            <label for="_replyto">Your email address:</label>
+            <input type="email" name="_replyto" required />
+
+            <label for="message">Your message:</label>
+            <textarea name="message" cols="30" rows="10" required></textarea>
+
+            <input type="hidden" name="_subject" />
+
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <input id="send-message" type="submit" value="Send" />
+
+        </form>
+      </div>
+        
     </section>
 
     <div class="wrapper">
@@ -66,8 +88,6 @@
       </footer>
 
     </div>
-
-  
 
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
