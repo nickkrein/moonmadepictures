@@ -102,10 +102,21 @@ a {
 	opacity: .5;
 }
 
-.contact-form {
-	position: relative;
+.contact {
 	width: 100%;
 	min-height: 100%;
+  padding: 50px 0;
+  box-sizing: border-box;
+  .wrapper {
+    width: 60%;
+  }
+  .contact-form {
+    width: 60%;
+    input, textarea {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 
