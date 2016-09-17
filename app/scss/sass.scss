@@ -110,21 +110,24 @@ a {
   .wrapper {
     width: 60%;
   }
+
   .contact-form {
     width: 60%;
+    .form-item {
+      margin-bottom: 20px;
+    }
+
     input, textarea {
       display: block;
-      border-radius: 5px;
+      border-radius: 3px;
       width: 100%;
     }
     input[type=text], input[type=email], textarea {
       background: #FAFAFA;
       box-sizing: border-box;
     }
-    div {
-
-      input[type=submit] {
-      }
+    input[type=submit] {
+      background: transparent;
     }
   }
 }
@@ -146,7 +149,7 @@ footer {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #010101;
-  background: #DCD8D7;
+  background: #FFF;
   opacity: .5;
   box-shadow: -2px 0px 2px 0px rgba(34,2,0,.5);
   p {
