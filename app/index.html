@@ -60,22 +60,27 @@
       <div class="wrapper">
         <form class="contact-form wrapper" action="https://formspree.io/nkreinmusic@gmail.com"
           method="POST">
-
+    
+          <div class="form-item">
             <label for="name">Your name:</label>
             <input type="text" name="name" required />
-
-            <label for="_replyto">Your email address:</label>
-            <input type="email" name="_replyto" required />
-
+          </div>
+    
+          <div class="form-item">
+             <label for="_replyto">Your email address:</label>
+              <input type="email" name="_replyto" required />
+          </div>
+    
+          <div class="form-item">
             <label for="message">Your message:</label>
             <textarea type="text" name="message" cols="30" rows="10" required></textarea>
+          </div>
 
-            <input type="hidden" name="_subject" />
+          <input type="hidden" name="_subject" />
 
-            <input type="text" name="_gotcha" style="display:none" />
-            <div>
-              <input id="send-message" type="submit" value="Send" />
-            </div>
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <input id="send-message" type="submit" value="Send" />
         </form>
       </div>
         
